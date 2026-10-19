@@ -1,4 +1,4 @@
-![VTEX IO MCP: servidor MCP de la comunidad para desarrollo en VTEX IO](./public/hero-vtex-io-mcp.png)
+![VTEX IO MCP: documentación, bloques de tienda y código conectados a un servidor de conocimiento local](.github/assets/readme-header.png)
 
 # VTEX IO MCP [![vtex-io-mcp MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/zeluizr/vtex-io-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zeluizr/vtex-io-mcp) 
 
@@ -13,6 +13,11 @@
 ---
 
 ## Características
+
+Versión del código: **0.1.8**, según [package.json](package.json). La entrada
+[src/index.ts](src/index.ts) conecta el servidor por **stdio**; el cliente MCP inicia
+el proceso y se comunica por la entrada y salida estándar, sin abrir un puerto HTTP.
+Las nueve herramientas se registran en [src/tools/index.ts](src/tools/index.ts).
 
 - **Scaffolding de apps VTEX IO**: `manifest.json` y estructura de carpetas para cualquier combinación de builders.
 - **Backend listo para empezar**: servicio Node con `service.json`, clients, rutas HTTP y handlers de eventos; esquema GraphQL con resolvers tipados.
