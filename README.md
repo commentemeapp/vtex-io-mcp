@@ -1,4 +1,8 @@
-![VTEX IO MCP: documentación, bloques de tienda y código conectados a un servidor de conocimiento local](.github/assets/readme-header.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/readme-header-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset=".github/assets/readme-header.png">
+  <img alt="VTEX IO MCP: documentación, bloques de tienda y código conectados a un servidor de conocimiento local" src=".github/assets/readme-header.png" width="100%">
+</picture>
 
 # VTEX IO MCP [![vtex-io-mcp MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/zeluizr/vtex-io-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zeluizr/vtex-io-mcp) 
 
