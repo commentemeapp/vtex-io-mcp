@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/banner.png" width="100%" alt="vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.">
-</p>
+![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.](https://raw.githubusercontent.com/zeluizr/vtex-io-mcp/main/assets/banner.png)
 
 # vtex-io-mcp
 
