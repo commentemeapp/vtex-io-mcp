@@ -1,17 +1,17 @@
-![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.](https://raw.githubusercontent.com/zeluizr/vtex-io-mcp/main/assets/banner.png)
+![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.](https://raw.githubusercontent.com/commentemeapp/vtex-io-mcp/main/assets/banner.png)
 
 # vtex-io-mcp
 
 **Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.**
 
-[![npm](https://img.shields.io/npm/v/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://www.npmjs.com/package/vtex-io-mcp)
+[![npm](https://img.shields.io/npm/v/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://www.npmjs.com/package/@commenteme/vtex-io-mcp)
 [![node](https://img.shields.io/node/v/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://nodejs.org)
 [![licencia](https://img.shields.io/npm/l/vtex-io-mcp?labelColor=005278&color=FFBD38)](./LICENSE)
 
 ## Instalación
 
 ```bash
-claude mcp add vtex-io -- npx -y vtex-io-mcp
+claude mcp add vtex-io -- npx -y @commenteme/vtex-io-mcp
 ```
 
 El cliente MCP corre el servidor con `npx`, así que no hace falta instalar nada. Requiere Node `>= 18`. Para Claude Desktop, Cursor, VS Code y Windsurf, mira [Clientes MCP](#clientes-mcp).
@@ -50,7 +50,7 @@ Funciona con Claude Code, Claude Desktop, Cursor, VS Code, Windsurf y cualquier 
   "mcpServers": {
     "vtex-io": {
       "command": "npx",
-      "args": ["-y", "vtex-io-mcp"]
+      "args": ["-y", "@commenteme/vtex-io-mcp"]
     }
   }
 }
@@ -64,15 +64,15 @@ Funciona con Claude Code, Claude Desktop, Cursor, VS Code, Windsurf y cualquier 
     "vtex-io": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "vtex-io-mcp"]
+      "args": ["-y", "@commenteme/vtex-io-mcp"]
     }
   }
 }
 ```
 
-**Otros clientes.** Cualquiera con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y vtex-io-mcp`. Si prefieres instalación global, `npm install -g vtex-io-mcp` y usa `vtex-io-mcp` como comando.
+**Otros clientes.** Cualquiera con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y @commenteme/vtex-io-mcp`. Si prefieres instalación global, `npm install -g @commenteme/vtex-io-mcp` y usa `vtex-io-mcp` como comando.
 
-El servidor está en el [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zeluizr%2Fvtex-io-mcp/versions/latest) como `io.github.zeluizr/vtex-io-mcp`.
+El servidor está en el [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.commentemeapp%2Fvtex-io-mcp/versions/latest) como `io.github.commentemeapp/vtex-io-mcp`.
 
 ### Herramientas
 
@@ -146,7 +146,7 @@ assets/               # header del README (no va en el paquete npm)
 ### Desarrollo
 
 ```bash
-git clone https://github.com/zeluizr/vtex-io-mcp.git
+git clone https://github.com/commentemeapp/vtex-io-mcp.git
 cd vtex-io-mcp
 npm install
 npm run build

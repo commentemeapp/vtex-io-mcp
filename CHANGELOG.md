@@ -5,6 +5,19 @@ Todos los cambios notables de este proyecto se documentan en este archivo.
 El formato se basa en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/)
 y este proyecto sigue el [Versionado Semántico](https://semver.org/lang/es/).
 
+## [0.2.0] - 2026-10-29
+
+### Modificado
+- El paquete pasa a llamarse `@commenteme/vtex-io-mcp`. `vtex-io-mcp` queda en 0.1.8 y se
+  descontinúa: para migrar, cambia `-y vtex-io-mcp` por `-y @commenteme/vtex-io-mcp` en la
+  configuración del cliente. El comando del binario sigue siendo `vtex-io-mcp`.
+- El repositorio pasa a `github.com/commentemeapp/vtex-io-mcp`, y el servidor en el Official MCP
+  Registry pasa a `io.github.commentemeapp/vtex-io-mcp`: el login por OIDC de GitHub Actions solo
+  publica en el namespace del dueño del repositorio.
+- README con banner y badges del padrón v10 de commente.me.
+- Dependencias con alertas de seguridad actualizadas.
+- `AGENTS.md` para el Codex.
+
 ## [0.1.8] - 2026-09-26
 
 ### Añadido

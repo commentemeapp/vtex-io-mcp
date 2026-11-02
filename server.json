@@ -1,11 +1,11 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.zeluizr/vtex-io-mcp",
+  "name": "io.github.commentemeapp/vtex-io-mcp",
   "title": "VTEX IO MCP",
   "description": "Scaffold VTEX IO apps, Node services and GraphQL, look up Store Framework block props, search docs",
-  "websiteUrl": "https://github.com/zeluizr/vtex-io-mcp#readme",
+  "websiteUrl": "https://github.com/commentemeapp/vtex-io-mcp#readme",
   "repository": {
-    "url": "https://github.com/zeluizr/vtex-io-mcp",
+    "url": "https://github.com/commentemeapp/vtex-io-mcp",
     "source": "github"
   },
   "version": "0.1.8",
@@ -13,7 +13,7 @@
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "vtex-io-mcp",
+      "identifier": "@commenteme/vtex-io-mcp",
       "version": "0.1.8",
       "runtimeHint": "npx",
       "transport": {

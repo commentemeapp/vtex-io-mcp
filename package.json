@@ -1,7 +1,7 @@
 {
-	"name": "vtex-io-mcp",
-	"version": "0.1.8",
-	"mcpName": "io.github.zeluizr/vtex-io-mcp",
+	"name": "@commenteme/vtex-io-mcp",
+	"version": "0.2.0",
+	"mcpName": "io.github.commentemeapp/vtex-io-mcp",
 	"description": "MCP server for VTEX IO development — Store Framework, React, Node services, GraphQL, Admin and more",
 	"type": "module",
 	"bin": {
@@ -32,10 +32,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"homepage": "https://www.npmjs.com/package/vtex-io-mcp",
+	"homepage": "https://www.npmjs.com/package/@commenteme/vtex-io-mcp",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zeluizr/vtex-io-mcp.git"
+		"url": "git+https://github.com/commentemeapp/vtex-io-mcp.git"
 	},
 	"license": "MIT",
 	"engines": {

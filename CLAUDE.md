@@ -417,7 +417,7 @@ server.prompt(
 
 ```json
 {
-  "name": "vtex-io-mcp",
+  "name": "@commenteme/vtex-io-mcp",
   "version": "0.1.0",
   "description": "MCP server for VTEX IO development — Store Framework, React, Node services, GraphQL, Admin, and more",
   "type": "module",
