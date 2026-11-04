@@ -5,8 +5,8 @@
 **Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.**
 
 [![npm](https://img.shields.io/npm/v/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://www.npmjs.com/package/@commenteme/vtex-io-mcp)
-[![node](https://img.shields.io/node/v/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://nodejs.org)
-[![licencia](https://img.shields.io/npm/l/vtex-io-mcp?labelColor=005278&color=FFBD38)](./LICENSE)
+[![node](https://img.shields.io/node/v/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://nodejs.org)
+[![licencia](https://img.shields.io/npm/l/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](./LICENSE)
 
 ## Instalación
 
@@ -181,7 +181,7 @@ claude mcp add vtex-io-local -- node /ruta/a/vtex-io-mcp/build/index.js
 
 ### Ramas y publicación
 
-El trabajo nace en una rama que sale de `dev` y el PR va contra `dev`. De ahí se promueve a `qa` y, después de probar, a `main`, siempre con merge de la rama completa. El CI corre `lint` y `build` en Node 18, 20 y 22.
+El trabajo nace en una rama que sale de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). El CI corre `lint` y `build` en Node 18, 20 y 22.
 
 Para publicar, sube la versión en `package.json` y `CHANGELOG.md` y empuja un tag `v*`: el workflow `publish.yml` compila, publica en npm con _provenance_, crea el GitHub Release y publica el `server.json` en el MCP Registry. Los cambios de cada versión están en [CHANGELOG.md](./CHANGELOG.md).
 
@@ -192,4 +192,4 @@ Abre un issue o un PR contra `dev`.
 
 ---
 
-Hecho por [commente.me](https://commente.me) · hola@commente.me
+Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
