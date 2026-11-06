@@ -35,7 +35,7 @@ Reinicia el cliente y pide lo que necesitas. El asistente elige la herramienta:
 - **Documentación en el editor**: 391 documentos de VTEX y 10 cursos oficiales, con búsqueda por palabras clave.
 - **Local y sin credenciales**: todo el conocimiento va en el paquete. No llama a APIs externas ni pide claves.
 
-Funciona con Claude Code, Claude Desktop, Cursor, VS Code, Windsurf y cualquier cliente MCP por `stdio`.
+Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP por `stdio`.
 
 ## Documentación
 
@@ -69,6 +69,28 @@ Funciona con Claude Code, Claude Desktop, Cursor, VS Code, Windsurf y cualquier 
   }
 }
 ```
+
+**Codex**, con el CLI (queda en `~/.codex/config.toml`):
+
+```bash
+codex mcp add vtex-io -- npx -y @commenteme/vtex-io-mcp
+```
+
+O a mano, en `~/.codex/config.toml` o en `.codex/config.toml` del proyecto:
+
+```toml
+[mcp_servers.vtex-io]
+command = "npx"
+args = ["-y", "@commenteme/vtex-io-mcp"]
+```
+
+**Gemini CLI**, con el CLI (`-s user` lo deja en `~/.gemini/settings.json`; sin `-s`, en `.gemini/settings.json` del proyecto):
+
+```bash
+gemini mcp add -s user vtex-io npx -y @commenteme/vtex-io-mcp
+```
+
+**GitHub Copilot CLI**, en `~/.copilot/mcp-config.json` o en `.mcp.json` del proyecto, con el mismo JSON de `mcpServers` de arriba. En VS Code, Copilot usa el `.vscode/mcp.json`.
 
 **Otros clientes.** Cualquiera con transporte `stdio` sirve: el comando es `npx` y los argumentos, `-y @commenteme/vtex-io-mcp`. Si prefieres instalación global, `npm install -g @commenteme/vtex-io-mcp` y usa `vtex-io-mcp` como comando.
 
