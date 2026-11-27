@@ -14,7 +14,7 @@ export const addBlockSchema = {
       'Unique block identifier appended after #. Example: if blockId is "hero", result is "rich-text#hero". Defaults to the blockName.'
     ),
   props: z
-    .record(z.unknown())
+    .record(z.string(), z.unknown())
     .optional()
     .describe('Props to set on the block. Keys must match valid prop names for the block.'),
   children: z
