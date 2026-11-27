@@ -1,12 +1,12 @@
-![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.](https://raw.githubusercontent.com/commentemeapp/vtex-io-mcp/main/assets/banner.png)
+![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node y GraphQL.](.github/assets/banner.png)
 
 # vtex-io-mcp
 
 **Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.**
 
-[![npm](https://img.shields.io/npm/v/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://www.npmjs.com/package/@commenteme/vtex-io-mcp)
-[![node](https://img.shields.io/node/v/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](https://nodejs.org)
-[![licencia](https://img.shields.io/npm/l/@commenteme/vtex-io-mcp?labelColor=005278&color=FFBD38)](./LICENSE)
+[![npm](https://badgen.net/npm/v/@commenteme/vtex-io-mcp?color=005278)](https://www.npmjs.com/package/@commenteme/vtex-io-mcp)
+[![node](https://badgen.net/npm/node/@commenteme/vtex-io-mcp)](https://nodejs.org)
+[![licencia](https://badgen.net/npm/license/@commenteme/vtex-io-mcp)](./LICENSE)
 
 ## Instalación
 
@@ -203,15 +203,13 @@ claude mcp add vtex-io-local -- node /ruta/a/vtex-io-mcp/build/index.js
 
 ### Ramas y publicación
 
-El trabajo nace en una rama que sale de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). El CI corre `lint` y `build` en Node 18, 20 y 22.
+El trabajo nace en una rama que sale de `dev` y el PR va contra `dev`. Después de probar localmente, `dev` se promueve a `main` con merge de la rama completa (sin `qa` desde el 30/10/2026). No hay CI en GitHub: antes de cada merge y de cada publicación corre `npm run lint` y `npm run build` en tu máquina.
 
-Para publicar, sube la versión en `package.json` y `CHANGELOG.md` y empuja un tag `v*`: el workflow `publish.yml` compila, publica en npm con _provenance_, crea el GitHub Release y publica el `server.json` en el MCP Registry. Los cambios de cada versión están en [CHANGELOG.md](./CHANGELOG.md).
+Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md`, haz el merge a `main`, crea el tag `v*` y, desde `main` y en una terminal interactiva (npm pide autenticarse en el navegador), corre `npm publish`. El `server.json` se publica en el MCP Registry con `mcp-publisher publish`. Los cambios de cada versión están en [CHANGELOG.md](./CHANGELOG.md).
 
 ## Contribuir · Licencia
 
 Abre un issue o un PR contra `dev`.
 [MIT](./LICENSE).
 
----
-
-Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
+_Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
