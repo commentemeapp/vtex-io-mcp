@@ -5,6 +5,16 @@ Todos los cambios notables de este proyecto se documentan en este archivo.
 El formato se basa en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/)
 y este proyecto sigue el [Versionado Semántico](https://semver.org/lang/es/).
 
+## [0.2.1] - 2026-11-27
+
+### Seguridad
+- `zod` pasa de 3.x a 4.6.7: la 3.x tiene una alerta alta (GHSA-mrhx-c7xc-m3w5, memoria agotada al
+  validar colecciones grandes) sin corrección en esa línea. `add-block` usa `z.record` con la llave
+  explícita, como pide la 4.x.
+- Dependencias transitivas del SDK con alertas actualizadas en el lockfile (`body-parser`,
+  `@hono/node-server`, `hono`). `npm audit` queda en cero.
+- `server.json` vuelve a la versión del paquete (estaba en 0.1.8).
+
 ## [0.2.0] - 2026-10-29
 
 ### Modificado
