@@ -1,4 +1,4 @@
-![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node y GraphQL.](.github/assets/banner.png)
+![vtex-io-mcp · Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node y GraphQL.](https://raw.githubusercontent.com/commentemeapp/vtex-io-mcp/main/.github/assets/banner.png)
 
 # vtex-io-mcp
 
