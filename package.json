@@ -1,6 +1,6 @@
 {
 	"name": "@commenteme/vtex-io-mcp",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"mcpName": "io.github.commentemeapp/vtex-io-mcp",
 	"description": "MCP server for VTEX IO development — Store Framework, React, Node services, GraphQL, Admin and more",
 	"type": "module",
@@ -43,7 +43,7 @@
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.32.1",
-		"zod": "^3.22.4"
+		"zod": "^4.6.7"
 	},
 	"devDependencies": {
 		"@types/node": "^20.0.0",
