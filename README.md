@@ -4,9 +4,7 @@
 
 **Servidor MCP para desarrollar en VTEX IO: Store Framework, React, Node, GraphQL y Admin.**
 
-[![npm](https://badgen.net/npm/v/@commenteme/vtex-io-mcp?color=005278)](https://www.npmjs.com/package/@commenteme/vtex-io-mcp)
-[![node](https://badgen.net/npm/node/@commenteme/vtex-io-mcp)](https://nodejs.org)
-[![licencia](https://badgen.net/npm/license/@commenteme/vtex-io-mcp)](./LICENSE)
+Versión 0.2.1 · en desarrollo. Cambios en [CHANGELOG.md](CHANGELOG.md).
 
 ## Instalación
 
@@ -14,30 +12,7 @@
 claude mcp add vtex-io -- npx -y @commenteme/vtex-io-mcp
 ```
 
-El cliente MCP corre el servidor con `npx`, así que no hace falta instalar nada. Requiere Node `>= 18`. Para Claude Desktop, Cursor, VS Code y Windsurf, mira [Clientes MCP](#clientes-mcp).
-
-## Uso rápido
-
-Reinicia el cliente y pide lo que necesitas. El asistente elige la herramienta:
-
-- "Crea una app VTEX IO llamada `product-reviews` con los builders react, node, graphql y store"
-- "Que props acepta el `flex-layout.row`? Dame un ejemplo con dos columnas"
-- "Genera un servicio Node con una ruta pública `GET /_v/order/:orderId` y un handler para `order.created`"
-- "Arma el esquema GraphQL con una query `productReviews(productId: ID!)` y una mutation `addReview`"
-- "Busca en la documentación como funcionan las CSS Handles"
-- "Que endpoints tiene la API de Master Data?"
-
-## Que incluye
-
-- **Scaffolding de apps VTEX IO**: `manifest.json` y carpetas para cualquier combinación de builders.
-- **Backend listo para empezar**: servicio Node con `service.json`, clients, rutas HTTP y handlers de eventos; esquema GraphQL con resolvers tipados.
-- **Store Framework**: props, ejemplos y JSONC validado para los blocks del catálogo.
-- **Documentación en el editor**: 391 documentos de VTEX y 10 cursos oficiales, con búsqueda por palabras clave.
-- **Local y sin credenciales**: todo el conocimiento va en el paquete. No llama a APIs externas ni pide claves.
-
-Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP por `stdio`.
-
-## Documentación
+El cliente MCP corre el servidor con `npx`, así que no hace falta instalar nada. Para Claude Desktop, Cursor, VS Code y Windsurf, mira [Clientes MCP](#clientes-mcp).
 
 ### Clientes MCP
 
@@ -96,6 +71,27 @@ gemini mcp add -s user vtex-io npx -y @commenteme/vtex-io-mcp
 
 El servidor está en el [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.commentemeapp%2Fvtex-io-mcp/versions/latest) como `io.github.commentemeapp/vtex-io-mcp`.
 
+## Uso
+
+Reinicia el cliente y pide lo que necesitas. El asistente elige la herramienta:
+
+- "Crea una app VTEX IO llamada `product-reviews` con los builders react, node, graphql y store"
+- "Que props acepta el `flex-layout.row`? Dame un ejemplo con dos columnas"
+- "Genera un servicio Node con una ruta pública `GET /_v/order/:orderId` y un handler para `order.created`"
+- "Arma el esquema GraphQL con una query `productReviews(productId: ID!)` y una mutation `addReview`"
+- "Busca en la documentación como funcionan las CSS Handles"
+- "Que endpoints tiene la API de Master Data?"
+
+### Que incluye
+
+- **Scaffolding de apps VTEX IO**: `manifest.json` y carpetas para cualquier combinación de builders.
+- **Backend listo para empezar**: servicio Node con `service.json`, clients, rutas HTTP y handlers de eventos; esquema GraphQL con resolvers tipados.
+- **Store Framework**: props, ejemplos y JSONC validado para los blocks del catálogo.
+- **Documentación en el editor**: 391 documentos de VTEX y 10 cursos oficiales, con búsqueda por palabras clave.
+- **Local y sin credenciales**: todo el conocimiento va en el paquete. No llama a APIs externas ni pide claves.
+
+Funciona con Claude Code, Claude Desktop, Codex, Cursor, Gemini CLI, GitHub Copilot, VS Code, Windsurf y cualquier cliente MCP por `stdio`.
+
 ### Herramientas
 
 La entrada [src/index.ts](src/index.ts) conecta el servidor por `stdio`: el cliente inicia el proceso y habla por la entrada y salida estándar, sin abrir puerto HTTP. Las nueve herramientas se registran en [src/tools/index.ts](src/tools/index.ts).
@@ -148,24 +144,13 @@ Blocks disponibles hoy: `rich-text`, `info-card`, `flex-layout.row`, `flex-layou
 - [ ] Prompts MCP para escenarios comunes: home, PDP, servicio REST, app fullstack, app Admin
 - [ ] Scripts de ingestión para actualizar `data/` desde los cursos y los README de `vtex-apps`
 
-### Estructura
+## Requisitos
 
-```text
-src/
-├── index.ts          # entry point del binario (stdio)
-├── server.ts         # McpServer: registra tools y resources
-├── tools/            # una herramienta por archivo, registradas en tools/index.ts
-├── resources/        # vtex://concepts y vtex://courses
-└── knowledge/        # carga y búsqueda sobre data/
-data/
-├── blocks/           # un JSON por block + _index.json
-├── builders/         # referencia por builder
-├── concepts/         # documentación en Markdown
-└── courses/          # cursos en Markdown + _index.json
-assets/               # header del README (no va en el paquete npm)
-```
+- Node `>= 18`.
+- Un cliente MCP con transporte `stdio`.
+- No pide credenciales ni llama a APIs externas.
 
-### Desarrollo
+## Desarrollo
 
 ```bash
 git clone https://github.com/commentemeapp/vtex-io-mcp.git
@@ -207,9 +192,34 @@ El trabajo nace en una rama que sale de `dev` y el PR va contra `dev`. Después 
 
 Para publicar, sube la versión en `package.json`, `server.json` y `CHANGELOG.md`, haz el merge a `main`, crea el tag `v*` y, desde `main` y en una terminal interactiva (npm pide autenticarse en el navegador), corre `npm publish`. El `server.json` se publica en el MCP Registry con `mcp-publisher publish`. Los cambios de cada versión están en [CHANGELOG.md](./CHANGELOG.md).
 
-## Contribuir · Licencia
+### Contribuir
 
 Abre un issue o un PR contra `dev`.
+
+## Estructura
+
+```text
+src/
+├── index.ts          # entry point del binario (stdio)
+├── server.ts         # McpServer: registra tools y resources
+├── tools/            # una herramienta por archivo, registradas en tools/index.ts
+├── resources/        # vtex://concepts y vtex://courses
+└── knowledge/        # carga y búsqueda sobre data/
+data/
+├── blocks/           # un JSON por block + _index.json
+├── builders/         # referencia por builder
+├── concepts/         # documentación en Markdown
+└── courses/          # cursos en Markdown + _index.json
+assets/               # banner antiguo, lo leen las versiones ya publicadas en npm
+.github/assets/       # banner del README
+```
+
+## Licencia
+
 [MIT](./LICENSE).
+
+Contacto: hablecon@commente.me
+
+---
 
 _Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
